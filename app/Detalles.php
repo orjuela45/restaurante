@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Detalles extends Model
 {
     protected $table = 'detalles';
-    protected $filltable = array('id','idRestaurante','numero', 'estado','created_at','updated_at');
+    protected $filltable = array('id','idRestaurante','numero', 'fechareserva', 'estado','created_at','updated_at');
 }

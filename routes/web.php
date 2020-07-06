@@ -17,4 +17,6 @@ Route::get('/', 'RestauranteController@index');
 
 Route::get('/ver/{id}', 'DetallesController@ver')->name('detalle');
 
+Route::get('/reservas', 'DetallesController@reservas')->name('reservas');
+
 

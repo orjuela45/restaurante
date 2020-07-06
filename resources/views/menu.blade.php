@@ -1,6 +1,17 @@
 @extends('layouts.base')
 <script src="{{ asset('js/menu.js') }}"></script>
 <div class="container mt-5">
+    <nav class="navbar navbar-light bg-light justify-content-between m-3">
+        <a class="btn btn-primary" href="{{route('reservas')}}" style="color: white">Lista de reservas</a>
+        <form action="{{route('filtrar')}}" method="post" class="form-inline">
+            <select class="browser-default custom-select m-4" name="tipo">
+                <option value="Nombre" selected>Nombre</option>
+                <option value="Ciudad">Ciudad</option>
+                </select>
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="filtro">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filtrar</button>
+        </form>
+    </nav>
     <div class="row">
         <div class="col-sm-12 col-xl-4">
             <div class="card" id="cardInsertar">

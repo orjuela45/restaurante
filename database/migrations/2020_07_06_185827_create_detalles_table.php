@@ -17,6 +17,7 @@ class CreateDetallesTable extends Migration
             $table->id();
             $table->bigInteger('idRestaurante');
             $table->bigInteger('numero');
+            $table->date('fechaReserva');
             $table->boolean('estado');
             $table->timestamps();
         });
@@ -29,6 +30,6 @@ class CreateDetallesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detalle');
+        Schema::dropIfExists('detalles');
     }
 }
